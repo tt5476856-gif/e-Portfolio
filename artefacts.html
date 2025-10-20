@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Artefacts — e-Portfolio | Malnuaimi880</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Artefacts & Evidence</h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="artefacts.html">Artefacts</a>
+        <a href="contributions.html">Contributions</a>
+        <a href="evaluation.html">Evaluation</a>
+        <a href="reflection.html">Reflection</a>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="card">
+        <h2>Units 1–2: Risk Analysis & Design</h2>
+        <div class="grid">
+          <div class="artifact">
+            <h3>Risk Register (Unit 1)</h3>
+            <p class="meta">Risk register categorising likelihood and impact (ISO/IEC 27005). Key risks: unauthorised access, SQL injection, data leakage.</p>
+            <p>Learning: How to structure risks and select controls (prevent, detect, respond).</p>
+            <p><a href="#" title="link to risk register">GitHub: /unit1/risk-register.pdf</a></p>
+          </div>
+
+          <div class="artifact">
+            <h3>Architecture Sketches (Unit 2)</h3>
+            <p class="meta">High-level system diagrams showing authentication flow, data storage, and encryption boundaries.</p>
+            <p>Learning: Mapping trust boundaries guides threat modelling.</p>
+            <p><a href="#" title="design sketch">Screenshot: /assets/images/arch-sketch.png</a></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Units 3–4: Code & Implementation</h2>
+        <div class="artifact">
+          <h3>Encryption & Authentication</h3>
+          <p class="meta">Implemented bcrypt for password hashing, AES-256 encryption, and JWT session handling.</p>
+          <pre class="code">// Node.js password hashing
+const bcrypt = require('bcrypt');
+const hash = await bcrypt.hash(password, 12);</pre>
+          <p><a href="#" title="auth module">GitHub: /unit3/auth-module</a></p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Units 5–6: Collaboration & Decisions</h2>
+        <div class="artifact">
+          <h3>Team Meeting Notes</h3>
+          <p class="meta">Minutes captured in GitHub Wiki including decisions on input validation and CI policies.</p>
+          <p>Learning: Transparent records improve handover and incident response.</p>
+        </div>
+
+        <div class="artifact">
+          <h3>Unit 6 Status Document</h3>
+          <p class="meta">Original project plan used as baseline for evaluation at Unit 11.</p>
+          <p><a href="#" title="unit 6 status">Download: /unit6/status.pdf</a></p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Units 7–8: Feedback & Iteration</h2>
+        <div class="artifact">
+          <h3>Peer & Tutor Feedback</h3>
+          <p class="meta">Annotated code review notes highlighting input sanitation, secure headers, and session hardening.</p>
+          <p>Learning: Iterative improvement reduces attack surface.</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Units 9–10: Testing & Incident Simulation</h2>
+        <div class="artifact">
+          <h3>Penetration Testing (OWASP ZAP)</h3>
+          <p class="meta">Resolved critical alerts (XSS, SQLi) and documented low-risk findings.</p>
+          <p><a href="#" title="zap report">Download: /unit9/zap-report.pdf</a></p>
+        </div>
+
+        <div class="artifact">
+          <h3>Incident Response Simulation</h3>
+          <p class="meta">Roles, communication, and post-incident learning documented.</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Unit 11: Final Artefact</h2>
+        <div class="artifact">
+          <h3>Final Web App</h3>
+          <p class="meta">Deployed prototype with risk management documentation, tests, and user guide.</p>
+          <p><a class="btn" href="#" title="repo link">View repository</a></p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">© 2025 Malnuaimi880 • <a href="index.html">Home</a></footer>
+  </div>
+</body>
+</html>
