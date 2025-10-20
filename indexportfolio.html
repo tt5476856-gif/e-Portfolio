@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>e-Portfolio: Developing a Secure Web Application</title>
+  <style>
+    :root{--accent:#0b5cff;--muted:#6b7280;--bg:#f7f9fc}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:var(--bg); color:#0f172a; margin:0}
+    .container{max-width:900px;margin:40px auto;padding:28px;background:white;border-radius:12px;box-shadow:0 8px 30px rgba(16,24,40,0.06)}
+    header{display:flex;align-items:center;justify-content:space-between}
+    h1{font-size:1.6rem;margin:0;color:var(--accent)}
+    p.lead{color:var(--muted);margin-top:6px}
+    nav a{color:var(--accent);text-decoration:none;margin-left:12px}
+    section{margin-top:22px}
+    h2{font-size:1.05rem;margin-bottom:8px}
+    .meta{font-size:0.9rem;color:var(--muted)}
+    .artifact{border-left:3px solid #eef2ff;padding:12px 16px;background:#fbfdff;border-radius:8px;margin-bottom:12px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .code{font-family:monospace;background:#0f172a;color:#fff;padding:8px;border-radius:6px;overflow:auto}
+    footer{margin-top:28px;border-top:1px solid #eef2ff;padding-top:12px;color:var(--muted);font-size:0.9rem}
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--accent);color:white;text-decoration:none}
+    @media (max-width:700px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>e-Portfolio: Developing a Secure Web Application</h1>
+        <div class="meta">Student: Mohammed Khalfan • Module: Security & Risk Management</div>
+        <div class="meta">e-Portfolio URL: <a href="https://mohammed1khalfan.github.io/e-Portfolio/" target="_blank">https://mohammed1khalfan.github.io/e-Portfolio/</a></div>
+      </div>
+      <nav>
+        <a href="#intro">Intro</a>
+        <a href="#artefacts">Artefacts</a>
+        <a href="#contrib">Contributions</a>
+        <a href="#eval">Evaluation</a>
+        <a href="#reflect">Reflection</a>
+      </nav>
+    </header>
+
+    <section id="intro">
+      <h2>Section 1 — Introduction</h2>
+      <p class="lead">This e-portfolio documents my learning journey across the Security and Risk Management module. It presents artefacts from each unit, evaluates project progress, and includes a critical reflective piece structured around Rolfe et al.'s (2001) model. The portfolio demonstrates how theoretical frameworks were applied to the practical task of developing a secure web application and illustrates personal and team development in risk-aware software engineering.</p>
+    </section>
+
+    <section id="artefacts">
+      <h2>Section 2 — Artefacts &amp; Evidence</h2>
+
+      <div class="artifact">
+        <strong>Units 1–2: Risk Analysis &amp; Design Sketches</strong>
+        <p class="meta">Artefact: Risk register &amp; initial UI / architecture sketches</p>
+        <p>A structured risk register (based on ISO 27005 principles) and architecture sketches documenting where authentication and encryption are applied. Links and screenshots from the GitHub repository are provided below.</p>
+        <div class="grid">
+          <div><img src="https://via.placeholder.com/400x200?text=Risk+Register+Screenshot" alt="Risk register screenshot" style="width:100%;border-radius:6px"></div>
+          <div><img src="https://via.placeholder.com/400x200?text=Design+Sketch" alt="Design sketch" style="width:100%;border-radius:6px"></div>
+        </div>
+        <p class="meta">GitHub: <a href="#">link to unit 1-2 folder</a></p>
+      </div>
+
+      <div class="artifact">
+        <strong>Units 3–4: Encryption &amp; Authentication Code</strong>
+        <p class="meta">Artefact: Code snippets showing bcrypt password hashing and JWT-based authentication</p>
+        <pre class="code">// example: bcrypt usage
+const bcrypt = require('bcrypt');
+const hash = await bcrypt.hash(password, 12);</pre>
+        <p class="meta">GitHub: <a href="#">link to auth module</a></p>
+      </div>
+
+      <div class="artifact">
+        <strong>Units 5–6: Team Notes &amp; Wiki</strong>
+        <p class="meta">Artefact: Meeting minutes, wiki pages discussing SQL injection and session management mitigations</p>
+        <p>These notes demonstrate collaboration, task allocation, and decisions around input validation, prepared statements, and session hardening.</p>
+      </div>
+
+      <div class="artifact">
+        <strong>Units 7–8: Feedback and Iteration</strong>
+        <p class="meta">Artefact: Peer/tutor feedback logs and code updates</p>
+        <p>Feedback led to stronger input validation, additional unit tests, and clearer documentation of the incident response plan.</p>
+      </div>
+
+      <div class="artifact">
+        <strong>Units 9–10: Testing &amp; Incident Simulation</strong>
+        <p class="meta">Artefact: OWASP ZAP reports and incident response simulation documentation</p>
+        <p>The testing phase uncovered session-handling weaknesses which were patched; the simulation tested roles and communications under a mock breach scenario.</p>
+      </div>
+
+      <div class="artifact">
+        <strong>Unit 11: Final Project Artefact</strong>
+        <p class="meta">Artefact: Completed secure web application with documented risk management process</p>
+        <p>The final deployable artefact includes code, documentation, test reports and a summary comparing the Unit 6 status document to final outcomes.</p>
+        <p class="meta">Live demo / repo: <a href="https://mohammed1khalfan.github.io/e-Portfolio/" target="_blank">View e-Portfolio site</a></p>
+      </div>
+
+      <p class="meta">Note: replace placeholder images with legible screenshots from your GitHub repo; link each artefact to the corresponding folder in your repository.</p>
+    </section>
+
+    <section id="contrib">
+      <h2>Section 3 — Individual Contributions</h2>
+      <p>I led the implementation of secure authentication (bcrypt hashing, JWT session tokens) and maintained the threat model and risk register. I coordinated threat-mitigation tasks via GitHub issues and assisted with penetration testing and remediation. Tools used included GitHub, Jira/Trello, OWASP ZAP, and local CI tests. Challenges involved dependency management and balancing feature delivery with security hardening; these were addressed through targeted research and automated vulnerability scanning.</p>
+    </section>
+
+    <section id="eval">
+      <h2>Section 4 — Evaluation: Final Project vs Unit 6 Status</h2>
+      <p>The Unit 6 status document set ambitious goals; by Unit 11 we had scaled back non-essential features to prioritise secure core functionality. The final product shows measurable improvements in authentication strength, input validation, and documented incident response procedures. Teamwork matured from ad-hoc task assignments to a clearly defined sprint-like cadence with retrospectives and role clarity.</p>
+    </section>
+
+    <section id="reflect">
+      <h2>Section 5 — Reflective Section (WHAT / SO WHAT / NOW WHAT)</h2>
+      <p><!-- Insert full 1,000–1,500 word reflective essay here (Rolfe et al. structure) --></p>
+      <p class="meta">Tip: paste your polished reflective text here. Make sure to include citations and a reference list in the References section below.</p>
+    </section>
+
+    <section id="refs">
+      <h2>References</h2>
+      <ul>
+        <li>Kolb, D.A. (1984) <em>Experiential Learning: Experience as the Source of Learning and Development</em>. Prentice-Hall. <a href="https://www.researchgate.net/publication/235701029_Experiential_Learning_Experience_As_The_Source_Of_Learning_And_Development" target="_blank">Link</a></li>
+        <li>Tuckman, B. (1965) 'Developmental sequence in small groups', <em>Psychological Bulletin</em>, 63, pp. 384–399. <a href="https://doi.org/10.1037/h0022100" target="_blank">DOI</a></li>
+        <li>ISO/IEC 27005 (2022) <em>Information security risk management</em>. ISO. <a href="https://www.iso.org/standard/80585.html" target="_blank">Link</a></li>
+        <li>OWASP Foundation. OWASP Top Ten. <a href="https://owasp.org/www-project-top-ten/" target="_blank">https://owasp.org/www-project-top-ten/</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <div>Prepared for: Security &amp; Risk Management module • Submission: End of Unit 12</div>
+      <div style="margin-top:8px">Need changes? Reply and I will update the page with your real screenshots, exact repo links, and finalized reflection text.</div>
+    </footer>
+  </div>
+</body>
+</html>
